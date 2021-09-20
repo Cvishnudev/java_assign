@@ -1,0 +1,83 @@
+<html>
+  <head>
+    <style>
+      body {background-color: rgb(125, 169, 175);}
+      h1   {color: rgb(14, 58, 53);}
+      p    {color: rgb(0, 0, 0);}
+      </style>
+    <title>Javascript Assign</title>
+
+    <script>
+      function interest() {
+        p = document.getElementById("p").value;
+        n = document.getElementById("n").value;
+        r = document.getElementById("r").value;
+        result0 = document.getElementById("result0");
+        result0.innerHTML = "The interest is " + (p * n * r) / 100;
+      }
+
+      function reverse(str) {
+          let rev_str = "";
+          for (let i = str.length - 1; i >= 0; i--) {
+            rev_str += str[i];
+          }
+
+          return rev_str;
+        }
+
+      function isPalindrome() {
+        str = document.getElementById("str").value;
+        result1 = document.getElementById("result1");
+        if (str ==="")
+          {result1.innerHTML = "string empty";
+        return;}
+        reverse_str = reverse(str);
+
+        if (reverse_str === str) {
+            result1.innerHTML = "passed string is palindrome ";
+        } else {
+            result1.innerHTML = "passed string is not palindrome ";
+        }
+
+      }
+
+      function circleArea() {
+        rad = document.getElementById("rad").value;
+        result2 = document.getElementById("result2");
+        result2.innerHTML = "The Area of circle is " + rad * rad * Math.PI;
+      }
+    </script>
+  </head>
+
+  <body>
+    <h1>Q1.Simple Interest Calculation</h1>
+
+    Amount: <input id="p"  /><br />
+    Rate: <input id="r" /><br />
+    No. of Years: <input id="n"/><br />
+
+    <button onclick="interest()">Calculate</button>
+
+    <p id="result0"></p>
+    <hr />
+
+    <h1>Q2.Check if string is palindrome</h1>
+
+    Enter string: <input id="str" /><br />
+
+    <button onclick="isPalindrome()">Check</button>
+    
+    <p id="result1"></p>
+
+    <hr />
+    <h1>Q3.Calculate area of circle</h1>
+    Radius: <input id="rad" /><br />
+
+    <button onclick="circleArea()">Calculate</button>
+
+    <p id="result2"></p>
+  </body>
+</html>
+
+
+
